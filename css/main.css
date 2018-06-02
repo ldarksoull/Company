@@ -8,12 +8,7 @@
 
 body {
   font-family: "Vida 31 Pro";
-  font-size: 20px;
-  position: relative;
-  right: 0; }
-
-.slidebody {
-  right: 200px; }
+  font-size: 20px; }
 
 .wrapper {
   max-width: 1440px;
@@ -98,17 +93,13 @@ body {
       .menu-list__item-link {
         color: #893b67;
         text-decoration: none;
+        font-family: "Vida 31 Pro";
         font-size: 14px; }
-        @media screen and (max-width: 768px) {
-          .menu-list__item-link {
-            font-size: 24px; } }
         .menu-list__item-link:hover {
           text-decoration: underline; }
 
 .mobmenu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -117,6 +108,7 @@ body {
   -ms-flex-pack: center;
   justify-content: center;
   width: 100%;
+  font-family: "Vida 31 Pro";
   background-color: #fff; }
   @media screen and (max-width: 768px) {
     .mobmenu {
@@ -383,3 +375,36 @@ body {
   font-size: 30px;
   color: #893b67;
   cursor: pointer; }
+
+.header-body {
+  height: 232px;
+  background: url(/image/bg.jpg) center no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end; }
+  .header-body h1, .header-body h2 {
+    margin-left: 60px;
+    text-align: center;
+    background-color: #ffffff;
+    font-family: "Vida 33 Pro"; }
+  .header-body h1 {
+    line-height: 62px;
+    font-size: 48px;
+    color: #414141;
+    width: 340px;
+    height: 62px; }
+  .header-body h2 {
+    font-family: "Vida 33 Pro";
+    color: #777b80;
+    font-size: 18px;
+    line-height: 39px;
+    width: 130px;
+    height: 39px; }
