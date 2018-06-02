@@ -18,3 +18,19 @@ $(document).ready(function () {
     });
     
 });
+//accordeon
+
+
+$( function() {
+    var icons = {
+      header: "icon-arrow-down",
+      activeHeader: "icon-arrow-up"
+    };
+    $("#accordion" ).accordion({
+      icons: icons,
+      heightStyle: "content" 
+    });
+    $( "#accordion" ).accordion( "option", "active", 1 )
+    $( "#accordion" ).accordion( "option", "header", "div" );
+    $( "#accordion" ).accordion( "option", "heightStyle", "content" );
+  } );

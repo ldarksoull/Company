@@ -8,10 +8,7 @@
 body
     font-family: "Vida 31 Pro"
     font-size: 20px
-    position: relative
-    right: 0
-.slidebody
-    right: 200px
+
 .wrapper
     max-width: 1440px
     margin: 0 auto
@@ -28,6 +25,7 @@ body
 .logo
     display: flex
     flex-grow: 1
+    margin-right: 15px
     &-img
         display: block
 
@@ -36,6 +34,7 @@ body
 .menu
     display: flex
     flex-grow: 3
+    
     @media screen and (max-width: 1200px)
         position: absolute
         display: none
@@ -66,19 +65,19 @@ body
             &-link
                 color: #893b67
                 text-decoration: none
+                font-family: "Vida 31 Pro"
                 font-size: 14px
-                @media screen and (max-width: 768px)
-                    font-size: 24px
                 &:hover
                     text-decoration: underline
 // конец меню
 
 // мобильное меню
 .mobmenu
-    display: flex
+    display: none
     flex-direction: column
     justify-content: center
     width: 100%
+    font-family: "Vida 31 Pro"
     background-color: #fff
     @media screen and (max-width: 768px)
         display: none
@@ -124,13 +123,14 @@ body
         margin-right: 10px
         @media screen and (max-width: 600px)
             font-size: 20px
+// конец мобильного меню
 
 // кнопка сравнение
 .compare-wrapper
     margin: 0px 5px
     display: flex
     justify-content: center
-    width: 160px
+    width: 120px
     @media screen and (max-width: 768px)
         display: none
 .compare
@@ -282,6 +282,103 @@ body
     cursor: pointer
 // конец кнопка меню
 
+.header-body
+    height: 232px
+    width: 100%
+    background: url(/image/bg.jpg) center no-repeat
+    background-size: cover
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    h1, h2
+        margin-left: 60px
+        text-align: center
+        background-color: #ffffff
+        font-family: "Vida 33 Pro"
+        @media screen and(max-width: 768px)
+            margin: 0
+    h1
+        line-height: 62px
+        font-size: 48px
+        color: #414141 
+        width: 340px
+        height: 62px
+        @media screen and(max-width: 768px)
+            font-size: 32px
+            width: 100%
 
-        
-        
+    h2
+        font-family: "Vida 33 Pro"
+        color: #777b80
+        font-size: 18px
+        line-height: 39px
+        width: 130px
+        height: 39px
+        @media screen and(max-width: 768px)
+            font-size: 16px
+.content
+    display: flex
+    max-width: 1440px
+    margin: 0 auto
+    padding: 0 135px
+    @media screen and (max-width: 768px)
+        flex-wrap: wrap
+        padding: 0
+.sidebar
+    width: 30%
+    @media screen and (max-width: 768px)
+        width: 100%
+.main-content
+    width: 70%
+    @media screen and (max-width: 768px)
+        width: 100%
+
+// accordion
+// внешний контейнер аккордеона
+.ui-accordion
+    height: 0px
+// заголовки аккордеона
+.ui-accordion-header
+    background-color: #fcfcfc
+    border: 1px solid #edeeee
+    border-bottom: none
+    color: #000
+    font-family: "Vida 33 Pro"
+    font-size: 18px
+    font-weight: 700
+// Активный заголовок 
+.ui-accordion-header-active
+// неактивный заголовок
+.ui-accordion-header-collapsed
+// заголовок с иконкой
+.ui-accordion-icons
+// Элементы иконки в каждом заголовке аккордеона
+.ui-accordion-header-icon
+    width: 20px
+    height: 20px
+    background-size: contain
+    background: url('/image/circle-down.svg')
+// панели контента аккордеона
+.ui-accordion-content
+    background-color: #fcfcfc
+// Панель активного контента
+.ui-accordion-content-active   
+.ui-state-active .ui-icon
+    background: url('/image/circle-up.svg'),#893b67
+    border-radius: 50%
+    color: #fff
+    width: 20px
+    height: 20px
+    background-size: contain
+.ui-state .ui-icon
+
+.icon-arrow-down
+    width: 20px
+    height: 20px
+    background: url('/image/circle-down.svg') no-repeat
+    background-size: contain
+.icon-arrow-up
+    width: 20px
+    height: 20px
+    background: url('/image/circle-up.svg') no-repeat
+    background-size: contain

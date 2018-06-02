@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="libs/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="css/main.css">
     <title>This is title</title>
 </head>
@@ -20,7 +21,7 @@
                 </a>
             </div>
             <nav class="menu">
-                <ul class="menu-list" >
+                <ul class="menu-list">
                     <li class="menu-list__item">
                         <a class="menu-list__item-link" href="#">Раздел №1</a>
                     </li>
@@ -60,7 +61,7 @@
             </div>
         </div>
         <nav class="mobmenu wrapper" id="menu">
-            <ul class="mobmenu-list" >
+            <ul class="mobmenu-list">
                 <li class="mobmenu-list__item">
                     <a class="mobmenu-list__item-link" href="#">Раздел №1</a>
                 </li>
@@ -98,8 +99,117 @@
             <h1>Объект №51</h1>
         </div>
     </header>
+    <section class="content wrapper">
+        <aside class="sidebar">
+            <nav class="sidebar-menu">
+                <ul class="sidebar-menu-list">
+                    <li class="sidebar-menu-list__item">
+                        <a class="sidebar-menu-list__item-link" href="#">Документы</a>
+                    </li>
+                    <li class="sidebar-menu-list__item">
+                        <a class="sidebar-menu-list__item-link" href="#">План</a>
+                    </li>
+                    <li class="sidebar-menu-list__item">
+                        <a class="sidebar-menu-list__item-link" href="#">Оплата</a>
+                    </li>
+                    <li class="sidebar-menu-list__item">
+                        <a class="sidebar-menu-list__item-link" href="#">Стадии</a>
+                    </li>
+                    <li class="sidebar-menu-list__item">
+                        <a class="sidebar-menu-list__item-link" href="#">Online</a>
+                    </li>
+                    <li class="sidebar-menu-list__item">
+                        <a class="sidebar-menu-list__item-link" href="#">Инструкция</a>
+                    </li>
+                    <li class="sidebar-menu-list__item">
+                        <a class="sidebar-menu-list__item-link link--active" href="#">Уведомления</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="adresses">
+                <div class="adress">
+                    <h3 class="adress__title">Адрес 123</h3>
+                    <div class="adress-items">
+                        <h4 class="adress-items__text">Адрес 123</h4>
+                        <div class="adress-items-button">
+                            <div class="adress-items-button__text">Перейти</div>
+                            <div class="adress-items-button__icon"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="adress">
+                    <h3 class="adress__title">Адрес 123</h3>
+                    <div class="adress-items">
+                        <h4 class="adress-items__text">Адрес 123</h4>
+                        <div class="adress-items-button">
+                            <div class="adress-items-button__text">Перейти</div>
+                            <div class="adress-items-button__icon"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <main class="main-content">
+            <header class="main-content__title">
+                <h2 class="main-content__title-text">Уведомления</h2>
+                <div id="accordion">
+                    <div>
+                        <p class="date-badge">22/09/17</p>
+                        <h3>«Вращательный экваториальный момент — актуальная национальная задача»</h3>
+                    </div>
+                    <article>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus totam ab unde sed, est quae
+                            voluptatum harum laborum rerum veritatis fuga minus dolor incidunt? Qui molestias eum maxime
+                            labore eaque?</p>
+                    </article>
+                    <div class="active-panel">
+                        <p class="date-badge">21/09/17</p>
+                        <h3>Реальная власть как концепция</h3>
+                    </div>
+                    <article>
+                        <p>Современная критика выслеживает апогей. Малое колебание амбивалентно. Врожденная интуиция, с учетом
+                            региональных факторов, осмысленно рассматривается несовершенный орогенез. Актуализация аккумулирует
+                            трагический гений. Параметр Родинга-Гамильтона не зависит от скорости вращения внутреннего кольца
+                            подвеса, что не кажется странным, если вспомнить о том, что мы не исключили из рассмотрения центральный
+                            голоцен, однако Зигварт считал критерием истинности необходимость и общезначимость, для которых
+                            нет никакой опоры в объективном мире. Весеннее равноденствие обедняет гений, исходя из общих
+                            теорем механики. Освобождение, несмотря на не менее значительную.</p>
+                    </article>
+                    <div>
+                        <p class="date-badge">11/08/17</p>
+                        <h3>Из ряда вон выходящий математический маятник: гипотеза и теории</h3>
+                    </div>
+                    <article>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem illum inventore, soluta mollitia
+                            error iusto. At facilis voluptatibus dolor repudiandae aut minima alias et, quaerat, voluptate
+                            provident modi, id nostrum?</p>
+                    </article>
+                    <div>
+                        <p class="date-badge">11/08/17</p>
+                        <h3>Межпланетный знак: методология и особенности</h3>
+                    </div>
+                    <article>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus modi dolore, sit rem tenetur dolores
+                            porro ad architecto deserunt magnam sapiente quidem repudiandae perferendis aperiam neque cumque
+                            laborum, ullam reprehenderit?</p>
+                    </article>
+                    <div>
+                        <p class="date-badge">24/07/17</p>
+                        <h3>Юрский маховик: ядро или засветка неба?</h3>
+                    </div>
+                    <article>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum amet dolore, facilis facere vitae
+                            hic ea nesciunt! Et error maiores earum culpa sit, fuga natus ut voluptatem est id voluptas.
+                        </p>
+                    </article>
+                </div>
+            </header>
+        </main>
+    </section>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="js/script.js"></script>
 
 </html>
