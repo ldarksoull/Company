@@ -378,7 +378,7 @@ body {
 
 .header-body {
   height: 232px;
-  background: url(/image/bg.jpg) center no-repeat;
+  background: url(image/bg.jpg) center no-repeat;
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
