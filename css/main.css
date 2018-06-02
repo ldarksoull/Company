@@ -1,13 +1,13 @@
 @font-face {
   font-family: "Vida 31 Pro";
-  src: url("/font/Vida 31 Pro/vida31pro.otf"); }
+  src: url("font/Vida 31 Pro/vida31pro.otf"); }
 
 @font-face {
   font-family: "Vida 33 Pro";
-  src: url("/font/Vida 33 Pro/vida33pro.otf"); }
+  src: url("font/Vida 33 Pro/vida33pro.otf"); }
 
 body {
-  font-family: "Vida 31 pro";
+  font-family: "Vida 31 Pro";
   font-size: 20px;
   position: relative;
   right: 0; }
