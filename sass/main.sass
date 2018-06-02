@@ -1,12 +1,12 @@
 @font-face
     font-family: "Vida 31 Pro"
-    src: url('/font/Vida 31 Pro/vida31pro.otf')
+    src: url('font/Vida 31 Pro/vida31pro.otf')
 @font-face
     font-family: "Vida 33 Pro"
-    src: url('/font/Vida 33 Pro/vida33pro.otf')
+    src: url('font/Vida 33 Pro/vida33pro.otf')
     
 body
-    font-family: "Vida 31 pro"
+    font-family: "Vida 31 Pro"
     font-size: 20px
     position: relative
     right: 0
@@ -94,6 +94,7 @@ body
                 text-decoration: none
                 font-family: "Vida 31 Pro"
                 font-size: 24px
+                color: #893b67
                 &:hover
                     text-decoration: underline
 .mobcompare
@@ -117,10 +118,12 @@ body
         text-decoration: none
         color: #565f66
         font-family: "Vida 33 Pro"
-        font-size: 100%
+        font-size: 30px
         font-weight: 400
         line-height: 24px
         margin-right: 10px
+        @media screen and (max-width: 600px)
+            font-size: 20px
 
 // кнопка сравнение
 .compare-wrapper
