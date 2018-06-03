@@ -1,9 +1,9 @@
 @font-face
     font-family: "Vida 31 Pro"
-    src: url('font/Vida 31 Pro/vida31pro.otf')
+    src: url('/font/Vida 31 Pro/vida31pro.otf')
 @font-face
     font-family: "Vida 33 Pro"
-    src: url('font/Vida 33 Pro/vida33pro.otf')
+    src: url('/font/Vida 33 Pro/vida33pro.otf')
     
 body
     font-family: "Vida 31 Pro"
@@ -316,7 +316,7 @@ body
         height: 39px
         @media screen and(max-width: 768px)
             font-size: 16px
-.content
+.body
     display: flex
     max-width: 1440px
     margin: 0 auto
@@ -334,51 +334,60 @@ body
         width: 100%
 
 // accordion
-// внешний контейнер аккордеона
-.ui-accordion
-    height: 0px
-// заголовки аккордеона
-.ui-accordion-header
-    background-color: #fcfcfc
-    border: 1px solid #edeeee
-    border-bottom: none
-    color: #000
-    font-family: "Vida 33 Pro"
-    font-size: 18px
-    font-weight: 700
-// Активный заголовок 
-.ui-accordion-header-active
-// неактивный заголовок
-.ui-accordion-header-collapsed
-// заголовок с иконкой
-.ui-accordion-icons
-// Элементы иконки в каждом заголовке аккордеона
-.ui-accordion-header-icon
-    width: 20px
-    height: 20px
-    background-size: contain
-    background: url('/image/circle-down.svg')
-// панели контента аккордеона
-.ui-accordion-content
-    background-color: #fcfcfc
-// Панель активного контента
-.ui-accordion-content-active   
-.ui-state-active .ui-icon
-    background: url('/image/circle-up.svg'),#893b67
+.title
+    position: relative
+.accordion-title__text
+    max-width: 95%
+.date-badge
+    border-radius: 2px
+    background-color: #edeeee
+    width: 77px
+    height: 24px
+    color: #000000
+    font-family: "Vida 31 Pro"
+    font-size: 16px
+    font-weight: 400
+    line-height: 24px
+    text-align: center
+.icon
+    position: absolute
+    top: 40px
+    right: 24px
+    transition: .5s
     border-radius: 50%
-    color: #fff
-    width: 20px
-    height: 20px
-    background-size: contain
-.ui-state .ui-icon
-
 .icon-arrow-down
     width: 20px
     height: 20px
-    background: url('/image/circle-down.svg') no-repeat
+    background: url('/image/icon-arrow.png') no-repeat
     background-size: contain
-.icon-arrow-up
-    width: 20px
-    height: 20px
-    background: url('/image/circle-up.svg') no-repeat
-    background-size: contain
+.icon-change
+    transform: rotate(180deg)
+    background-color: url('/image/icon-arrow-pink.png') no-repeat
+.ui.styled.accordion .title
+    opacity: 0.8
+    color: #000000
+    font-family: "Vida 33 Pro"
+    font-size: 18px
+    font-weight: 400
+    line-height: 55px
+.ui.accordion .content
+    color: #5a5a58
+    font-family: "Vida 31 Pro"
+    font-size: 16px
+    font-weight: 400
+    line-height: 24px
+.ui.accordion .content.active
+    background-color: #fcfcfc
+.ui.styled.accordion .active.title
+    background-color: #fcfcfc
+.ui.styled.accordion .content
+    margin-top: 10px
+.ui.styled.accordion .title
+    border: none
+.ui.styled.accordion, .ui.styled.accordion .accordion
+    border: none
+    box-shadow: none
+.accordion-wrapper
+    margin-bottom: 30px
+    border: 1px solid #edeeee
+
