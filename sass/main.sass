@@ -1,9 +1,9 @@
 @font-face
     font-family: "Vida 31 Pro"
-    src: url('/font/Vida 31 Pro/vida31pro.otf')
+    src: url('../font/Vida 31 Pro/vida31pro.otf')
 @font-face
     font-family: "Vida 33 Pro"
-    src: url('/font/Vida 33 Pro/vida33pro.otf')
+    src: url('../font/Vida 33 Pro/vida33pro.otf')
     
 body
     font-family: "Vida 31 Pro"
@@ -285,7 +285,7 @@ body
 .header-body
     height: 232px
     width: 100%
-    background: url(/image/bg.jpg) center no-repeat
+    background: url(../image/bg.jpg) center no-repeat
     background-size: cover
     display: flex
     flex-direction: column
@@ -320,20 +320,165 @@ body
     display: flex
     max-width: 1440px
     margin: 0 auto
-    padding: 0 135px
+    padding: 0 100px
+    @media screen and (max-width: 1200px)
+        flex-wrap: wrap
     @media screen and (max-width: 768px)
         flex-wrap: wrap
-        padding: 0
+        padding: 0 15px
 .sidebar
     width: 30%
+    border-right: 1px solid rgba(145, 145, 145, 0.1)
+    margin-right: 40px
+    margin-top: 64px
+    @media screen and (max-width: 1200px)
+        display: flex
+        flex-wrap: wrap
+        width: 100%
+        margin-right: 0
+        margin-top: 54px
     @media screen and (max-width: 768px)
         width: 100%
+    &-menu
+        @media screen and (max-width: 1200px)
+            display: flex
+        &-list
+            margin-top: -20px
+            @media screen and (max-width: 1200px)
+                display: none
+                flex-wrap: wrap
+            &__item
+                margin: 20px 0
+                padding-left: 20px
+                border: 1px solid transparent
+                width: 280px
+                height: 41px
+                line-height: 39px
+                border-radius: 20px
+                position: relative
+                cursor: pointer
+                &:hover, &:focus, &:active
+                    border: 1px solid rgba(83, 86, 90, .2)
+                &-link
+                    display: block
+                    color: #893b67
+                    font-family: "Vida 31 Pro"
+                    font-size: 16px
+                    &:hover
+                        color: #53565a
+.item--active
+    border: 1px solid rgba(83, 86, 90, .2)
+    a
+        color: #53565a
+    &::after 
+        content: '6'
+        color: #ffffff
+        line-height: 20px
+        text-align: center
+        font-size: 13px
+        position: absolute
+        right: -5px
+        top: -7px
+        width: 20px
+        height: 20px
+        border-radius: 50%
+        background-color: #893b67
+// селект меню
+.select-menu-wrapper
+    display: block
+    width: 100%
+    height: 40px
+    position: relative
+    &::after
+        content: '6'
+        color: #ffffff
+        line-height: 20px
+        text-align: center
+        font-size: 13px
+        position: absolute
+        left: 110px
+        top: 0px
+        width: 20px
+        height: 20px
+        border-radius: 50%
+        background-color: #893b67
+.select-menu
+    font-family: "Vida 31 Pro"
+    width: 100%
+    height: 40px
+    padding: 0 18px
+    border-radius: 20px
+    border: 1px solid rgba(83, 86, 90, .2)
+    color: #53565a
+    font-size: 16px
+
+
+// конец меню
+.adresses
+    @media screen and (max-width: 1200px)
+        display: flex
+        width: 100%
+.adress
+    width: 290px
+    height: 131px
+    border-top: 1px solid rgba(145, 145, 145, 0.13)
+    display: flex
+    flex-direction: column
+    justify-content: center
+    @media screen and (max-width: 1200px)
+        margin: 0 20px
+        border-top: none
+        border-right: 1px solid rgba(145, 145, 145, 0.13)
+        width: 50%
+    &:last-child 
+        @media screen and (max-width: 1200px)
+            border: none
+    &__title
+        color: #893b67
+        font-family: "Vida 33 Pro"
+        font-size: 24px
+        height: 34px
+    &-items
+        display: flex
+        justify-content: space-between
+        align-items: center
+        height: 30px
+        &__text
+            color: #000000
+            font-family: "Vida 31 Pro"
+            font-size: 16px
+        &-button
+            display: flex
+            align-items: center
+            &__text
+                color: #893b67
+                font-family: "Vida 33 Pro"
+                font-size: 14px
+                margin-right: 10px
+                cursor: pointer
+            &__icon
+                width: 20px
+                height: 20px
+                background: url('../image/arrow-right.png')
+                cursor: pointer
+
 .main-content
     width: 70%
+    padding-top: 56px
     @media screen and (max-width: 768px)
         width: 100%
+    &__title
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        &-text
+            padding-bottom: 41px
+            color: #414141
+            font-family: "Vida 33 Pro"
+            font-size: 36px
+            font-weight: 400
 
-// accordion
+// аккордион
 .title
     position: relative
 .accordion-title__text
@@ -349,27 +494,27 @@ body
     font-weight: 400
     line-height: 24px
     text-align: center
+    margin: 24px 0
 .icon
     position: absolute
-    top: 40px
+    top: calc(50% - 10px)
     right: 24px
     transition: .5s
     border-radius: 50%
 .icon-arrow-down
     width: 20px
     height: 20px
-    background: url('/image/icon-arrow.png') no-repeat
+    background: url('../image/icon-arrow.png') no-repeat
     background-size: contain
 .icon-change
     transform: rotate(180deg)
-    background-color: url('/image/icon-arrow-pink.png') no-repeat
+    background-image: url('../image/icon-arrow-pink.png') no-repeat
 .ui.styled.accordion .title
     opacity: 0.8
     color: #000000
     font-family: "Vida 33 Pro"
     font-size: 18px
     font-weight: 400
-    line-height: 55px
 .ui.accordion .content
     color: #5a5a58
     font-family: "Vida 31 Pro"
@@ -381,13 +526,14 @@ body
 .ui.styled.accordion .active.title
     background-color: #fcfcfc
 .ui.styled.accordion .content
-    margin-top: 10px
 .ui.styled.accordion .title
     border: none
 .ui.styled.accordion, .ui.styled.accordion .accordion
     border: none
     box-shadow: none
 .accordion-wrapper
-    margin-bottom: 30px
+    margin-bottom: 24px
     border: 1px solid #edeeee
-
+.accordion1-mb
+    margin-bottom: 50px
+// конец аккордион

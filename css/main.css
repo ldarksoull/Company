@@ -1,10 +1,10 @@
 @font-face {
   font-family: "Vida 31 Pro";
-  src: url("/font/Vida 31 Pro/vida31pro.otf"); }
+  src: url("../font/Vida 31 Pro/vida31pro.otf"); }
 
 @font-face {
   font-family: "Vida 33 Pro";
-  src: url("/font/Vida 33 Pro/vida33pro.otf"); }
+  src: url("../font/Vida 33 Pro/vida33pro.otf"); }
 
 body {
   font-family: "Vida 31 Pro";
@@ -380,7 +380,7 @@ body {
 .header-body {
   height: 232px;
   width: 100%;
-  background: url(/image/bg.jpg) center no-repeat;
+  background: url(../image/bg.jpg) center no-repeat;
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -427,24 +427,205 @@ body {
   display: flex;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 135px; }
+  padding: 0 100px; }
+  @media screen and (max-width: 1200px) {
+    .body {
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; } }
   @media screen and (max-width: 768px) {
     .body {
       -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-      padding: 0; } }
+      padding: 0 15px; } }
 
 .sidebar {
-  width: 30%; }
+  width: 30%;
+  border-right: 1px solid rgba(145, 145, 145, 0.1);
+  margin-right: 40px;
+  margin-top: 64px; }
+  @media screen and (max-width: 1200px) {
+    .sidebar {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      width: 100%;
+      margin-right: 0;
+      margin-top: 54px; } }
   @media screen and (max-width: 768px) {
     .sidebar {
       width: 100%; } }
+  @media screen and (max-width: 1200px) {
+    .sidebar-menu {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
+  .sidebar-menu-list {
+    margin-top: -20px; }
+    @media screen and (max-width: 1200px) {
+      .sidebar-menu-list {
+        display: none;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap; } }
+    .sidebar-menu-list__item {
+      margin: 20px 0;
+      padding-left: 20px;
+      border: 1px solid transparent;
+      width: 280px;
+      height: 41px;
+      line-height: 39px;
+      border-radius: 20px;
+      position: relative;
+      cursor: pointer; }
+      .sidebar-menu-list__item:hover, .sidebar-menu-list__item:focus, .sidebar-menu-list__item:active {
+        border: 1px solid rgba(83, 86, 90, 0.2); }
+      .sidebar-menu-list__item-link {
+        display: block;
+        color: #893b67;
+        font-family: "Vida 31 Pro";
+        font-size: 16px; }
+        .sidebar-menu-list__item-link:hover {
+          color: #53565a; }
+
+.item--active {
+  border: 1px solid rgba(83, 86, 90, 0.2); }
+  .item--active a {
+    color: #53565a; }
+  .item--active::after {
+    content: '6';
+    color: #ffffff;
+    line-height: 20px;
+    text-align: center;
+    font-size: 13px;
+    position: absolute;
+    right: -5px;
+    top: -7px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #893b67; }
+
+.select-menu-wrapper {
+  display: block;
+  width: 100%;
+  height: 40px;
+  position: relative; }
+  .select-menu-wrapper::after {
+    content: '6';
+    color: #ffffff;
+    line-height: 20px;
+    text-align: center;
+    font-size: 13px;
+    position: absolute;
+    left: 110px;
+    top: 0px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #893b67; }
+
+.select-menu {
+  font-family: "Vida 31 Pro";
+  width: 100%;
+  height: 40px;
+  padding: 0 18px;
+  border-radius: 20px;
+  border: 1px solid rgba(83, 86, 90, 0.2);
+  color: #53565a;
+  font-size: 16px; }
+
+@media screen and (max-width: 1200px) {
+  .adresses {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%; } }
+
+.adress {
+  width: 290px;
+  height: 131px;
+  border-top: 1px solid rgba(145, 145, 145, 0.13);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  @media screen and (max-width: 1200px) {
+    .adress {
+      margin: 0 20px;
+      border-top: none;
+      border-right: 1px solid rgba(145, 145, 145, 0.13);
+      width: 50%; } }
+  @media screen and (max-width: 1200px) {
+    .adress:last-child {
+      border: none; } }
+  .adress__title {
+    color: #893b67;
+    font-family: "Vida 33 Pro";
+    font-size: 24px;
+    height: 34px; }
+  .adress-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 30px; }
+    .adress-items__text {
+      color: #000000;
+      font-family: "Vida 31 Pro";
+      font-size: 16px; }
+    .adress-items-button {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .adress-items-button__text {
+        color: #893b67;
+        font-family: "Vida 33 Pro";
+        font-size: 14px;
+        margin-right: 10px;
+        cursor: pointer; }
+      .adress-items-button__icon {
+        width: 20px;
+        height: 20px;
+        background: url("../image/arrow-right.png");
+        cursor: pointer; }
 
 .main-content {
-  width: 70%; }
+  width: 70%;
+  padding-top: 56px; }
   @media screen and (max-width: 768px) {
     .main-content {
       width: 100%; } }
+  .main-content__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .main-content__title-text {
+      padding-bottom: 41px;
+      color: #414141;
+      font-family: "Vida 33 Pro";
+      font-size: 36px;
+      font-weight: 400; }
 
 .title {
   position: relative; }
@@ -462,11 +643,12 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
-  text-align: center; }
+  text-align: center;
+  margin: 24px 0; }
 
 .icon {
   position: absolute;
-  top: 40px;
+  top: calc(50% - 10px);
   right: 24px;
   -webkit-transition: .5s;
   -o-transition: .5s;
@@ -476,22 +658,21 @@ body {
 .icon-arrow-down {
   width: 20px;
   height: 20px;
-  background: url("/image/icon-arrow.png") no-repeat;
+  background: url("../image/icon-arrow.png") no-repeat;
   background-size: contain; }
 
 .icon-change {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
-  background-color: url("/image/icon-arrow-pink.png") no-repeat; }
+  background-image: url("../image/icon-arrow-pink.png") no-repeat; }
 
 .ui.styled.accordion .title {
   opacity: 0.8;
   color: #000000;
   font-family: "Vida 33 Pro";
   font-size: 18px;
-  font-weight: 400;
-  line-height: 55px; }
+  font-weight: 400; }
 
 .ui.accordion .content {
   color: #5a5a58;
@@ -506,9 +687,6 @@ body {
 .ui.styled.accordion .active.title {
   background-color: #fcfcfc; }
 
-.ui.styled.accordion .content {
-  margin-top: 10px; }
-
 .ui.styled.accordion .title {
   border: none; }
 
@@ -518,5 +696,8 @@ body {
   box-shadow: none; }
 
 .accordion-wrapper {
-  margin-bottom: 30px;
+  margin-bottom: 24px;
   border: 1px solid #edeeee; }
+
+.accordion1-mb {
+  margin-bottom: 50px; }

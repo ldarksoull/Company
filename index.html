@@ -100,7 +100,19 @@
         </div>
     </header>
     <section class="body wrapper">
+            
         <aside class="sidebar">
+            <div class="select-menu-wrapper">
+                <select class="select-menu" name="select-menu" id="select-menu" width="100%">
+                    <option class="sidebar-menu-list__item-link" value="">Документы</option>
+                    <option class="sidebar-menu-list__item-link" value="">План</option>
+                    <option class="sidebar-menu-list__item-link" value="">Оплата</option>
+                    <option class="sidebar-menu-list__item-link" value="">Стадии</option>
+                    <option class="sidebar-menu-list__item-link" value="">Online</option>
+                    <option class="sidebar-menu-list__item-link" value="">Инструкция</option>
+                    <option class="sidebar-menu-list__item-link" value="" selected="selected">Уведомления</option>
+                </select>
+            </div>
             <nav class="sidebar-menu">
                 <ul class="sidebar-menu-list">
                     <li class="sidebar-menu-list__item">
@@ -121,7 +133,7 @@
                     <li class="sidebar-menu-list__item">
                         <a class="sidebar-menu-list__item-link" href="#">Инструкция</a>
                     </li>
-                    <li class="sidebar-menu-list__item">
+                    <li class="sidebar-menu-list__item item--active">
                         <a class="sidebar-menu-list__item-link link--active" href="#">Уведомления</a>
                     </li>
                 </ul>
@@ -152,12 +164,13 @@
         <main class="main-content">
             <header class="main-content__title">
                 <h2 class="main-content__title-text">Уведомления</h2>
+            </header>
                 <div class="ui styled fluid accordion">
                 <div class="accordion-wrapper"> 
                         <div class="title title1">
                         <p class="date-badge">22/09/17</p>
                         <i class="icon-arrow-down icon"></i>
-                        <h3 class="accordion-title__text">«Вращательный экваториальный момент — актуальная национальная задача»</h3>
+                        <h3 class="accordion-title__text accordion1-mb">«Вращательный экваториальный момент — актуальная национальная задача»</h3>
                     </div>
                     <article class="content">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus totam ab unde sed, est quae
@@ -218,7 +231,7 @@
                     </article>
                 </div>
                 </div>
-            </header>
+            
         </main>
     </section>
 </body>
