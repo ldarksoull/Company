@@ -282,6 +282,7 @@ body
     cursor: pointer
 // конец кнопка меню
 
+// header
 .header-body
     height: 232px
     width: 100%
@@ -305,7 +306,10 @@ body
         height: 62px
         @media screen and(max-width: 768px)
             font-size: 32px
-            width: 100%
+            width: 240px
+        @media screen and(max-width: 500px)
+            font-size: 24px
+            width: 180px            
 
     h2
         font-family: "Vida 33 Pro"
@@ -316,6 +320,12 @@ body
         height: 39px
         @media screen and(max-width: 768px)
             font-size: 16px
+            width: 100px
+        @media screen and(max-width: 500px)
+            font-size: 14px
+            width: 90px
+// header end
+
 .body
     display: flex
     max-width: 1440px
@@ -337,6 +347,7 @@ body
         width: 100%
         margin-right: 0
         margin-top: 54px
+        border-right: none
     @media screen and (max-width: 768px)
         width: 100%
     &-menu
@@ -418,6 +429,9 @@ body
     @media screen and (max-width: 1200px)
         display: flex
         width: 100%
+        margin-top: 20px
+    @media screen and (max-width: 366px)
+        flex-wrap: wrap
 .adress
     width: 290px
     height: 131px
@@ -426,13 +440,27 @@ body
     flex-direction: column
     justify-content: center
     @media screen and (max-width: 1200px)
-        margin: 0 20px
+        height: 80px
+        margin-right: 40px
         border-top: none
-        border-right: 1px solid rgba(145, 145, 145, 0.13)
         width: 50%
+        position: relative
+    @media screen and (max-width: 366px)
+        width: 100%
+        margin-right: 0px
+        &::after
+            content: ''
+            position: absolute
+            right: -40px
+            height: 80px
+            border-right: 1px solid rgba(145, 145, 145, 0.13)
     &:last-child 
         @media screen and (max-width: 1200px)
             border: none
+            margin-left: 40px
+            margin-right: 0
+        @media screen and (max-width: 366px)
+            margin-left: 0px
     &__title
         color: #893b67
         font-family: "Vida 33 Pro"
@@ -443,6 +471,10 @@ body
         justify-content: space-between
         align-items: center
         height: 30px
+        @media screen and(max-width: 400px)
+            flex-wrap: wrap
+        @media screen and (max-width: 366px)
+            flex-wrap: nowrap
         &__text
             color: #000000
             font-family: "Vida 31 Pro"
@@ -465,6 +497,8 @@ body
 .main-content
     width: 70%
     padding-top: 56px
+    @media screen and(max-width: 1200px)
+        width: 100%
     @media screen and (max-width: 768px)
         width: 100%
     &__title
@@ -537,3 +571,254 @@ body
 .accordion1-mb
     margin-bottom: 50px
 // конец аккордион
+// блок новостей
+.news-feed-wrapper
+    background-color: #eeeeee
+    width: 100%
+    padding: 31px 150px
+    @media screen and (max-width: 1050px)
+        padding: 31px 100px
+    @media screen and (max-width: 768px)
+        padding: 31px 15px
+.news-feed
+    display: flex
+    justify-content: space-between
+    align-items: center
+    max-width: 1440px
+    margin: 0 auto 
+.news
+    margin-right: 10px
+    @media screen and (max-width: 768px)
+        margin: 0
+    &-title
+        display: flex
+        align-items: center
+        &__date
+            color: rgba(0,0,0,0.4)
+            font-family: "Vida 31 Pro"
+            font-size: 14px
+            font-weight: 400
+            line-height: 20px
+        &__badge
+            margin-left: 5px
+            color: #000000
+            font-family: "Vida 31 Pro"
+            font-size: 10px
+            font-weight: 400
+            line-height: 20px
+            text-transform: uppercase
+            background-color: #fff
+            padding: 0 5px
+    &__text
+        margin-top: 5px
+        color: #000000
+        font-family: "Vida 31 Pro"
+        font-size: 14px
+        font-weight: 400
+        line-height: 18px
+        @media screen and (max-width: 768px)
+            color: #000000
+            font-family: "Vida 31 Pro"
+            font-size: 22px
+            line-height: 28.08px
+.main-badge
+    color: #000000
+    font-family: "Vida 33 Pro"
+    font-size: 10px
+    font-weight: 400
+    text-transform: uppercase
+    background-color: #c5e71b
+    position: relative
+    padding: 0 13px
+    &::before
+        content: ''
+        position: absolute
+        border: 10px solid transparent
+        border-left: 4px solid #eeeeee
+        left: 0
+    &::after
+        content: ''
+        position: absolute
+        border: 10px solid transparent
+        border-right: 4px solid #eeeeee
+        right: 0
+// конец блок новостей
+
+// футер
+// контакты
+.contacts
+    width: 30%
+    display: flex
+    flex-direction: column
+    margin-right: 10px
+    @media screen and (max-width: 1050px)
+        width: 44%
+.social-icons
+    display: flex
+    &__link
+        color: #893b67
+        font-family: "Font Awesome"
+        font-size: 18px
+        font-weight: 400
+        margin: 0 10px
+        cursor: pointer
+.footer-phone
+    margin-top: 41px
+    &__link
+        color: #424242
+        font-family: "Vida 33 Pro"
+        font-size: 24px
+        @media screen and (max-width: 900px)
+            font-size: 20px
+        @media screen and (max-width: 768px)
+            font-size: 24px
+.location
+    margin-top: 5px
+    color: #424242
+    font-family: "Vida 31 Pro"
+    font-size: 14px
+.mail
+    a
+        color: #893b67
+        font-family: "Vida 31 Pro"
+        font-size: 14px
+        line-height: 18px
+// конец контакты
+// меню футера
+.footer
+    display: flex
+    max-width: 1440px
+    margin: 0 auto
+    padding: 44px 140px
+    @media screen and (max-width: 1050px)
+        padding: 44px 100px
+    @media screen and (max-width: 768px)
+        flex-wrap: nowrap
+        padding: 44px 15px
+    @media screen and (max-width: 640px)
+        width: 100%
+        flex-wrap: wrap
+    &-menu
+        display: flex
+        justify-content: space-between
+        width: 70%
+        @media screen and (max-width: 1050px)
+            flex-wrap: wrap
+        @media screen and (max-width: 640px)
+            width: 100%
+            flex-direction: column
+        &-wrapper
+            width: 200px
+            @media screen and (max-width: 1050px)
+                width: 50%
+                display: flex
+                flex-direction: column
+                justify-content: flex-start
+                align-items: center
+                margin-bottom: 47px
+            @media screen and (max-width: 640px)
+                width: 100%
+                margin-bottom: 0
+        &__title
+            color: #000000
+            font-family: "Vida 33 Pro"
+            font-size: 14px
+            font-weight: 400
+            line-height: 24px
+            @media screen and (max-width: 640px)
+                width: 100%
+                border-bottom: 1px solid rgba(145, 145, 145, 0.1)
+            &::after
+                @media screen and (max-width: 640px)
+                    content: '\f106'
+                    position: absolute
+                    font-family: 'FontAwesome'
+                    font-size: 25px
+                    color: #000000
+                    right: 0
+                    transform: rotateX(180deg)
+                    transition: 0.5s
+
+        &-list
+            font-family: "Vida 31 Pro"
+            font-size: 14px
+            font-weight: 400
+            line-height: 24px
+            @media screen and (max-width: 640px)
+                width: 100%
+            &__item
+                width: 100%
+                &-link
+                    color: #893b67
+.last-list
+    margin-top: 24px
+    @media screen and (max-width: 640px)
+        display: none
+// конец меню футера
+
+//slick slider
+/* Icons
+@font-face
+  font-family: 'slick'
+  font-weight: normal
+  font-style: normal
+  src: url('../font/slick.eot')
+  src: url('../font/slick.eot?#iefix') format("embedded-opentype"), url('./font/slick.woff') format("woff"), url('../font/slick.ttf') format("truetype"), url('../font/slick.svg#slick') format("svg")
+
+/* Dots
+.slick-dotted.slick-slider
+  margin-bottom: 20px
+
+.slick-dots
+  position: absolute
+  bottom: -50px
+  display: block
+  width: 100%
+  padding: 0
+  margin: 0
+  list-style: none
+  text-align: center
+  li
+    position: relative
+    display: inline-block
+    width: 20px
+    height: 20px
+    margin: 0 5px
+    padding: 0
+    cursor: pointer
+    button
+      font-size: 20px
+      line-height: 0
+      display: block
+      width: 20px
+      height: 20px
+      padding: 5px
+      cursor: pointer
+      color: transparent
+      border: 0
+      outline: none
+      background: transparent
+      &:hover, &:focus
+        outline: none
+      &:hover:before, &:focus:before
+        opacity: 1
+        background: transparent
+      &:before
+        font-family: 'slick'
+        font-size: 16px
+        line-height: 20px
+        position: absolute
+        top: 0
+        left: 0
+        width: 20px
+        height: 20px
+        content: '•'
+        text-align: center
+        opacity: .25
+        color: black
+        -webkit-font-smoothing: antialiased
+        -moz-osx-font-smoothing: grayscale
+    &.slick-active button:before
+      opacity: .75
+      color: black   
+    

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Vida 31 Pro";
   src: url("../font/Vida 31 Pro/vida31pro.otf"); }
@@ -409,7 +410,11 @@ body {
     @media screen and (max-width: 768px) {
       .header-body h1 {
         font-size: 32px;
-        width: 100%; } }
+        width: 240px; } }
+    @media screen and (max-width: 500px) {
+      .header-body h1 {
+        font-size: 24px;
+        width: 180px; } }
   .header-body h2 {
     font-family: "Vida 33 Pro";
     color: #777b80;
@@ -419,7 +424,12 @@ body {
     height: 39px; }
     @media screen and (max-width: 768px) {
       .header-body h2 {
-        font-size: 16px; } }
+        font-size: 16px;
+        width: 100px; } }
+    @media screen and (max-width: 500px) {
+      .header-body h2 {
+        font-size: 14px;
+        width: 90px; } }
 
 .body {
   display: -webkit-box;
@@ -452,7 +462,8 @@ body {
       flex-wrap: wrap;
       width: 100%;
       margin-right: 0;
-      margin-top: 54px; } }
+      margin-top: 54px;
+      border-right: none; } }
   @media screen and (max-width: 768px) {
     .sidebar {
       width: 100%; } }
@@ -540,7 +551,13 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 100%; } }
+    width: 100%;
+    margin-top: 20px; } }
+
+@media screen and (max-width: 366px) {
+  .adresses {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; } }
 
 .adress {
   width: 290px;
@@ -558,13 +575,29 @@ body {
   justify-content: center; }
   @media screen and (max-width: 1200px) {
     .adress {
-      margin: 0 20px;
+      height: 80px;
+      margin-right: 40px;
       border-top: none;
-      border-right: 1px solid rgba(145, 145, 145, 0.13);
-      width: 50%; } }
+      width: 50%;
+      position: relative; } }
+  @media screen and (max-width: 366px) {
+    .adress {
+      width: 100%;
+      margin-right: 0px; }
+      .adress::after {
+        content: '';
+        position: absolute;
+        right: -40px;
+        height: 80px;
+        border-right: 1px solid rgba(145, 145, 145, 0.13); } }
   @media screen and (max-width: 1200px) {
     .adress:last-child {
-      border: none; } }
+      border: none;
+      margin-left: 40px;
+      margin-right: 0; } }
+  @media screen and (max-width: 366px) {
+    .adress:last-child {
+      margin-left: 0px; } }
   .adress__title {
     color: #893b67;
     font-family: "Vida 33 Pro";
@@ -581,6 +614,14 @@ body {
     -ms-flex-align: center;
     align-items: center;
     height: 30px; }
+    @media screen and (max-width: 400px) {
+      .adress-items {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap; } }
+    @media screen and (max-width: 366px) {
+      .adress-items {
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap; } }
     .adress-items__text {
       color: #000000;
       font-family: "Vida 31 Pro";
@@ -607,6 +648,9 @@ body {
 .main-content {
   width: 70%;
   padding-top: 56px; }
+  @media screen and (max-width: 1200px) {
+    .main-content {
+      width: 100%; } }
   @media screen and (max-width: 768px) {
     .main-content {
       width: 100%; } }
@@ -701,3 +745,311 @@ body {
 
 .accordion1-mb {
   margin-bottom: 50px; }
+
+.news-feed-wrapper {
+  background-color: #eeeeee;
+  width: 100%;
+  padding: 31px 150px; }
+  @media screen and (max-width: 1050px) {
+    .news-feed-wrapper {
+      padding: 31px 100px; } }
+  @media screen and (max-width: 768px) {
+    .news-feed-wrapper {
+      padding: 31px 15px; } }
+
+.news-feed {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  max-width: 1440px;
+  margin: 0 auto; }
+
+.news {
+  margin-right: 10px; }
+  @media screen and (max-width: 768px) {
+    .news {
+      margin: 0; } }
+  .news-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .news-title__date {
+      color: rgba(0, 0, 0, 0.4);
+      font-family: "Vida 31 Pro";
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px; }
+    .news-title__badge {
+      margin-left: 5px;
+      color: #000000;
+      font-family: "Vida 31 Pro";
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 20px;
+      text-transform: uppercase;
+      background-color: #fff;
+      padding: 0 5px; }
+  .news__text {
+    margin-top: 5px;
+    color: #000000;
+    font-family: "Vida 31 Pro";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px; }
+    @media screen and (max-width: 768px) {
+      .news__text {
+        color: #000000;
+        font-family: "Vida 31 Pro";
+        font-size: 22px;
+        line-height: 28.08px; } }
+
+.main-badge {
+  color: #000000;
+  font-family: "Vida 33 Pro";
+  font-size: 10px;
+  font-weight: 400;
+  text-transform: uppercase;
+  background-color: #c5e71b;
+  position: relative;
+  padding: 0 13px; }
+  .main-badge::before {
+    content: '';
+    position: absolute;
+    border: 10px solid transparent;
+    border-left: 4px solid #eeeeee;
+    left: 0; }
+  .main-badge::after {
+    content: '';
+    position: absolute;
+    border: 10px solid transparent;
+    border-right: 4px solid #eeeeee;
+    right: 0; }
+
+.contacts {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-right: 10px; }
+  @media screen and (max-width: 1050px) {
+    .contacts {
+      width: 44%; } }
+
+.social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .social-icons__link {
+    color: #893b67;
+    font-family: "Font Awesome";
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0 10px;
+    cursor: pointer; }
+
+.footer-phone {
+  margin-top: 41px; }
+  .footer-phone__link {
+    color: #424242;
+    font-family: "Vida 33 Pro";
+    font-size: 24px; }
+    @media screen and (max-width: 900px) {
+      .footer-phone__link {
+        font-size: 20px; } }
+    @media screen and (max-width: 768px) {
+      .footer-phone__link {
+        font-size: 24px; } }
+
+.location {
+  margin-top: 5px;
+  color: #424242;
+  font-family: "Vida 31 Pro";
+  font-size: 14px; }
+
+.mail a {
+  color: #893b67;
+  font-family: "Vida 31 Pro";
+  font-size: 14px;
+  line-height: 18px; }
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 44px 140px; }
+  @media screen and (max-width: 1050px) {
+    .footer {
+      padding: 44px 100px; } }
+  @media screen and (max-width: 768px) {
+    .footer {
+      -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+      padding: 44px 15px; } }
+  @media screen and (max-width: 640px) {
+    .footer {
+      width: 100%;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; } }
+  .footer-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 70%; }
+    @media screen and (max-width: 1050px) {
+      .footer-menu {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap; } }
+    @media screen and (max-width: 640px) {
+      .footer-menu {
+        width: 100%;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column; } }
+    .footer-menu-wrapper {
+      width: 200px; }
+      @media screen and (max-width: 1050px) {
+        .footer-menu-wrapper {
+          width: 50%;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          -webkit-box-pack: start;
+          -ms-flex-pack: start;
+          justify-content: flex-start;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          margin-bottom: 47px; } }
+      @media screen and (max-width: 640px) {
+        .footer-menu-wrapper {
+          width: 100%;
+          margin-bottom: 0; } }
+    .footer-menu__title {
+      color: #000000;
+      font-family: "Vida 33 Pro";
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24px; }
+      @media screen and (max-width: 640px) {
+        .footer-menu__title {
+          width: 100%;
+          border-bottom: 1px solid rgba(145, 145, 145, 0.1); } }
+      @media screen and (max-width: 640px) {
+        .footer-menu__title::after {
+          content: '\f106';
+          position: absolute;
+          font-family: 'FontAwesome';
+          font-size: 25px;
+          color: #000000;
+          right: 0;
+          -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+          -webkit-transition: 0.5s;
+          -o-transition: 0.5s;
+          transition: 0.5s; } }
+    .footer-menu-list {
+      font-family: "Vida 31 Pro";
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24px; }
+      @media screen and (max-width: 640px) {
+        .footer-menu-list {
+          width: 100%; } }
+      .footer-menu-list__item {
+        width: 100%; }
+        .footer-menu-list__item-link {
+          color: #893b67; }
+
+.last-list {
+  margin-top: 24px; }
+  @media screen and (max-width: 640px) {
+    .last-list {
+      display: none; } }
+
+/* Icons */
+@font-face {
+  font-family: 'slick';
+  font-weight: normal;
+  font-style: normal;
+  src: url("../font/slick.eot");
+  src: url("../font/slick.eot?#iefix") format("embedded-opentype"), url("./font/slick.woff") format("woff"), url("../font/slick.ttf") format("truetype"), url("../font/slick.svg#slick") format("svg"); }
+
+/* Dots */
+.slick-dotted.slick-slider {
+  margin-bottom: 20px; }
+
+.slick-dots {
+  position: absolute;
+  bottom: -50px;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center; }
+  .slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer; }
+    .slick-dots li button {
+      font-size: 20px;
+      line-height: 0;
+      display: block;
+      width: 20px;
+      height: 20px;
+      padding: 5px;
+      cursor: pointer;
+      color: transparent;
+      border: 0;
+      outline: none;
+      background: transparent; }
+      .slick-dots li button:hover, .slick-dots li button:focus {
+        outline: none; }
+      .slick-dots li button:hover:before, .slick-dots li button:focus:before {
+        opacity: 1;
+        background: transparent; }
+      .slick-dots li button:before {
+        font-family: 'slick';
+        font-size: 16px;
+        line-height: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        content: '•';
+        text-align: center;
+        opacity: .25;
+        color: black;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale; }
+    .slick-dots li.slick-active button:before {
+      opacity: .75;
+      color: black; }
