@@ -51,26 +51,23 @@ $(window).on('load resize', function() {
         $(".news-feed").slick("unslick");
     }
   });
-// accordion footer
-// $(window).on('load resize', function() {
-//     if ($(window).width() < 640){
-//         $('.footer-menu').accordion({
-//             selector: {
-//                 accordion : '.footer-menu',
-//                 title     : '.footer-menu__title',
-//                 trigger   : '.footer-menu__title',
-//                 content   : '.footer-menu-list'
-//             }
-//         })
-//     }
-// })
 
-$('.ui.accordion').accordion();
-$('.accordion').accordion({
-        selector: {
-            accordion : '.footer-menu',
-            title     : '.footer-menu__title',
-            trigger   : '.footer-menu__title',
-            content   : '.footer-menu-list'
-        }
+// footer
+$(window).on('load resize', function() {
+    if ($(window).width() < 640){
+        $('.footer-menu__title').addClass('title');
+        $('.footer-menu-list').addClass('content');
+        $('.footer-menu').accordion({
+            selector: {
+                trigger: '.title',
+                content: '.content'
+            }
     });
+    }
+    else{
+        $('.footer-menu__title').removeClass('title');
+        $('.footer-menu-list').removeClass('content');
+    }
+})
+
+

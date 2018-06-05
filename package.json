@@ -25,5 +25,7 @@
     "jquery.maskedinput": "^1.4.1",
     "plumber": "^0.4.8"
   },
-  "dependencies": {}
+  "dependencies": {
+    "semantic-ui-accordion": "^2.3.1"
+  }
 }
